@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>screen sharing</title>
+    <style>
+        body{
+            background-color: rgb(31, 68, 52);
+            display: flex;
+            align-items: center;
+            align-self: center;
+        }
+        h1{
+            color:  rgb(0, 33, 26);
+            font-size: 40px;
+            text-align: center;
+        }
+        #video{
+            width: auto;
+            height: 200px;
+            border: 5px solid rgb(0, 33, 26);
+            border-radius: 10px;
+           
+        }
+        #strat{
+            width: 90px;
+            border-radius: 10px;
+            margin: auto;
+            margin-left: 150px;
+            background-color: rgb(3, 107, 65);
+        }
+    </style>
+</head>
+<body>
+  <header>
+        <h1>The screen sharing</h1>
+    
+        <video id="video" autoplay></video>
+    <br><br>
+    <button id="strat">start screen share</button>
+    <br><br>
+    <div class="vid">
+   
+    </div>
+    <script>
+        strat.onclick = async () =>{
+            const screen=await navigator.inputDevices.getDisplayMedia({video:true});// screen share
+            video.srcObject = screen;
+        }
+    </script>
+</body>
+</html>
